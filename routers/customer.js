@@ -10,27 +10,27 @@ app.listen(PORT, () => {
 });
 
 // Customers
-app.get("/customers", (request, response) => {
+router.get("/", (request, response) => {
   response.status(200).json({ message: "GET all customers" });
 });
 
-app.post("/customers", (request, response) => {
+router.post("/", (request, response) => {
   response.status(200).json({ message: `CREATE new customer` });
 });
 
-app.get("/customers/:id", (request, response) => {
+router.get("/:id", (request, response) => {
   response
     .status(200)
     .json({ message: `GET customer with id ${request.params.id}` });
 });
 
-app.put("/customers/:id", (request, response) => {
+router.put("/:id", (request, response) => {
   response
     .status(200)
     .json({ message: `UPDATE customer with id ${request.params.id}` });
 });
 
-app.delete("/customers/:id", (request, response) => {
+router.delete("/:id", (request, response) => {
   response
     .status(200)
     .json({ message: `DELETE customer with id ${request.params.id}` });
