@@ -15,7 +15,7 @@ app.use("/customers", customerRouter);
 
 //Orders
 const orderRouter = require("./routers/order");
-app.use(".orders", orderRouter);
+app.use("/orders", orderRouter);
 
 //Payment
 const paymentRouter = require("./routers/payment");
