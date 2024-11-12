@@ -11,7 +11,7 @@ app.listen(PORT, () => {
 
 //Home Page
 app.get('/', (request, response) => {
-  response.response.send('<h1>API Homepage</h1>');
+  response.send('<h1>API Homepage</h1>');
 });
 
 //Customers
